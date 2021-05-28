@@ -10,8 +10,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "HubkitServiceApi",
-            targets: ["HubkitServiceApi"]
+            name: "HubkitApi",
+            targets: ["HubkitApi"]
         ),
     ],
     dependencies: [
@@ -20,7 +20,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "HubkitServiceApi",
+            name: "HubkitApi",
             dependencies: [
                 .product(name: "HubkitModel", package: "hubkit-model-swift"),
                 "Offenbach" 
