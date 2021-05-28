@@ -16,7 +16,6 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Offenbach", url: "https://github.com/MoveUpwards/Offenbach.git", from: "2.0.0"),
-        .package(name: "RxSwift", url: "https://github.com/ReactiveX/RxSwift.git", from: "6.0.0"),
         .package(url: "https://github.com/MoveUpwards/hubkit-model-swift.git", from: "2.0.0")
     ],
     targets: [
@@ -24,8 +23,7 @@ let package = Package(
             name: "HubkitServiceApi",
             dependencies: [
                 .product(name: "HubkitModel", package: "hubkit-model-swift"),
-                "Offenbach",
-                "RxSwift"
+                "Offenbach" 
             ],
             path: "Sources"
         ),
