@@ -1,16 +1,16 @@
 //
-//  HKJwtTokenRoutes.swift
+//  TokenRoutes.swift
 //  Alamofire
 //
 //  Created by Loïc GRIFFIE on 24/09/2018.
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKJwtToken {
-    /// Authenticate a user and get a HKJwtToken
+extension ApiToken {
+    /// Authenticate a user and get a ApiToken
     @discardableResult
     public static func authenticate(with params: LoginForm,
                                     completion: @escaping (Result<Self, AFError>) -> Void) -> DataRequest? {

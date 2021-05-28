@@ -1,5 +1,5 @@
 //
-//  HKSessionRoutes.swift
+//  SessionRoutes.swift
 //  HubKit
 //
 //  Created by Loïc GRIFFIE on 25/09/2018.
@@ -7,13 +7,13 @@
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKSession {
+extension HubkitModel.Session {
     /// Create a new session
     @discardableResult
-    public static func create(in project: HKProject,
+    public static func create(in project: Project,
                               _ metas: [String: Any] = [:],
                               _ capturedAt: Date,
                               completion: @escaping (Result<Self, AFError>) -> Void) -> DataRequest? {

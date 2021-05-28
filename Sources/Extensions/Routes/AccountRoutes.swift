@@ -1,5 +1,5 @@
 //
-//  HKAccountRoutes.swift
+//  AccountRoutes.swift
 //  HubKit
 //
 //  Created by Loïc GRIFFIE on 24/09/2018.
@@ -7,10 +7,10 @@
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKAccount {
+extension Account {
     /// Get the current authenticated user
     @discardableResult
     public static func me(completion: @escaping (Result<Self, AFError>) -> Void) -> DataRequest? {

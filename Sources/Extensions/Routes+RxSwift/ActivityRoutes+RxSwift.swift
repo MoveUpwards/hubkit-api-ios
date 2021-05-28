@@ -1,17 +1,17 @@
 //
-//  HKActivityRoutes+RxSwift.swift
+//  ActivityRoutes+RxSwift.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 import Offenbach
 import RxSwift
 
-extension HKActivity {
+extension Activity {
     /// Get the current authenticated user
     public static func all() -> Single<[Self]> {
         Single<[Self]>.create(subscribe: { single in

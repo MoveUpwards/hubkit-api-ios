@@ -1,5 +1,5 @@
 //
-//  HKRawDataRoutes.swift
+//  RawDataRoutes.swift
 //  HubKit
 //
 //  Created by Loïc GRIFFIE on 25/09/2018.
@@ -7,15 +7,15 @@
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKRawData {
+extension RawData {
     /// Create a new session raw data
     @discardableResult
-    public static func create(in session: HKSession,
-                              _ device: HKDevice,
-                              _ file: HKMultiPart,
+    public static func create(in session: HubkitModel.Session,
+                              _ device: Device,
+                              _ file: MultiPart,
                               progress: @escaping (Double) -> Void,
                               completion: @escaping (Result<Self, AFError>) -> Void) -> DataRequest? {
         let parameters: Parameters = [

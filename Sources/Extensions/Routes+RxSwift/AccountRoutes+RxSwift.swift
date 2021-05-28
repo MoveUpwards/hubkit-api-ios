@@ -1,20 +1,21 @@
 //
-//  HKJwtToken+RxSwift.swift
+//  AccountRoutes+RxSwift.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
 import Alamofire
+import HubkitModel
 import Foundation
 import Offenbach
 import RxSwift
 
-extension HKJwtToken {
-    /// Authenticate a user and get a HKJwtToken
-    public static func authenticate(with params: LoginForm) -> Single<Self> {
+extension Account {
+    /// Get the current authenticated user
+    public static func me() -> Single<Self> {
         Single<Self>.create(subscribe: { single in
-            let request = authenticate(with: params) { (result: Result<Self, AFError>) in
+            let request = me { (result: Result<Self, AFError>) in
                 single(result.mapError({ $0 as Error }))
             }
             return Disposables.create { request?.cancel() }

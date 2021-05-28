@@ -1,14 +1,14 @@
 //
-//  HKProjectRoutes+Model.swift
+//  ProjectRoutes+Model.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKProject {
+extension Project {
     internal struct HKProjectForm: Encodable {
         let project: String
         let capturedAt: TimeInterval

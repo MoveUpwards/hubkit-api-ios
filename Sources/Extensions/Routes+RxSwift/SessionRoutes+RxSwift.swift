@@ -1,19 +1,19 @@
 //
-//  HKSessionRoutes+RxSwift.swift
+//  SessionRoutes+RxSwift.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 import Offenbach
 import RxSwift
 
-extension HKSession {
+extension HubkitModel.Session {
     /// Create a new session
-    public static func create(in project: HKProject,
+    public static func create(in project: Project,
                               _ metas: [String: Any] = [:],
                               _ capturedAt: Date) -> Single<Self> {
         Single<Self>.create(subscribe: { single in

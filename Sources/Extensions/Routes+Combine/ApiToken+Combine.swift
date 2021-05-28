@@ -1,5 +1,5 @@
 //
-//  HKJwtToken+Combine.swift
+//  ApiToken+Combine.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
@@ -13,8 +13,8 @@ import Foundation
 import Offenbach
 
 @available(iOS 13.0, *)
-extension HKJwtToken {
-    /// Authenticate a user and get a HKJwtToken
+extension ApiToken {
+    /// Authenticate a user and get a ApiToken
     public static func authenticate(with params: LoginForm) -> AnyPublisher<Self, Error> {
         Future<Self, Error> { promise in
             authenticate(with: params) { (result: Result<Self, AFError>) in

@@ -1,17 +1,17 @@
 //
-//  HKDeviceRoutes+RxSwift.swift
+//  DeviceRoutes+RxSwift.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 import Offenbach
 import RxSwift
 
-extension HKDevice {
+extension Device {
     /// Create a new device
     public func create() -> Single<Self> {
         Single<Self>.create(subscribe: { single in
