@@ -1,13 +1,14 @@
 //
-//  HKAccountRoutes+Model.swift
+//  AccountRoutes+Model.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
 import Foundation
+import Offenbach
 
-extension HKJwtToken {
+extension ApiToken {
     public struct LoginForm: Encodable {
         let username: String
         let password: String

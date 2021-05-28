@@ -1,5 +1,5 @@
 //
-//  HKActivityRoutes.swift
+//  ActivityRoutes.swift
 //  HubKit
 //
 //  Created by Loïc GRIFFIE on 25/09/2018.
@@ -7,10 +7,10 @@
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKActivity {
+extension Activity {
     /// Get all activities from HubKit
     @discardableResult
     public static func all(completion: @escaping (Result<[Self], AFError>) -> Void) -> DataRequest? {

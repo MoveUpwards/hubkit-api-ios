@@ -1,5 +1,5 @@
 //
-//  HKDeviceRoutes.swift
+//  DeviceRoutes.swift
 //  HubKit
 //
 //  Created by Loïc GRIFFIE on 25/09/2018.
@@ -7,10 +7,10 @@
 //
 
 import Alamofire
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKDevice {
+extension Device {
     /// Create a new session
     @discardableResult
     public func create(completion: @escaping (Result<Self, AFError>) -> Void) -> DataRequest? {

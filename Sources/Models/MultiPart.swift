@@ -9,7 +9,7 @@
 import Foundation
 import Offenbach
 
-public struct HKMultiPart: MultiPartProtocol {
+public struct MultiPart: MultiPartProtocol {
     public let name: String
     public let content: FileProtocol
 

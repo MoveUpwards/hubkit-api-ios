@@ -1,5 +1,5 @@
 //
-//  HKFile.swift
+//  File.swift
 //  HubKit
 //
 //  Created by Loïc GRIFFIE on 09/10/2018.
@@ -9,11 +9,9 @@
 import Foundation
 import Offenbach
 
-public struct HKFile: FileProtocol {
+public struct File: FileProtocol {
     /// The file's local url.
-    public var url: URL? {
-        documentsDirectoryUrl?.appendingPathComponent("\(filename)")
-    }
+    public var url: URL? { documentsDirectoryUrl?.appendingPathComponent("\(filename)") }
 
     /// The file's data.
     public let data: Data
@@ -27,9 +25,9 @@ public struct HKFile: FileProtocol {
     /// Date of the file.
     public let date: Date
 
-    /// Creates a new `HKFile`.
+    /// Creates a new `File`.
     ///
-    ///     let file = HKFile(data: "hello", filename: "foo.txt", mimetype: "application/octect-stream")
+    ///     let file = File(data: "hello", filename: "foo.txt", mimetype: "application/octect-stream")
     ///
     /// - parameters:
     ///     - data: The file's contents. Default is empty data.
@@ -50,8 +48,8 @@ public struct HKFile: FileProtocol {
     }
 }
 
-extension HKFile: CustomStringConvertible {
+extension File: CustomStringConvertible {
     public var description: String {
-        "<File url: \(String(describing: url)), name: \(filename), type: \(mimetype), date: \(date)>"
+        "<File url: \(String(describing: url)) name: \(filename) type: \(mimetype) date: \(date)>"
     }
 }

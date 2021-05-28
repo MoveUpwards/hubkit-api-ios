@@ -1,14 +1,14 @@
 //
-//  HKDeviceRoutes+Model.swift
+//  DeviceRoutes+Model.swift
 //  
 //
 //  Created by lgriffie on 06/04/2021.
 //
 
-import HubkitDataModel
+import HubkitModel
 import Foundation
 
-extension HKDevice {
+extension Device {
     internal struct HKDeviceForm: Encodable {
         let manualMode: Bool
 

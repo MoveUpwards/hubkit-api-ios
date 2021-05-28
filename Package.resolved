@@ -6,17 +6,17 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "4d19ad82f80cc71ff829b941ded114c56f4f604c",
-          "version": "5.4.2"
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
         }
       },
       {
-        "package": "HubkitDataModel",
-        "repositoryURL": "https://github.com/MoveUpwards/hubkit-datamodel-ios.git",
+        "package": "hubkit-model-swift",
+        "repositoryURL": "https://github.com/MoveUpwards/hubkit-model-swift.git",
         "state": {
           "branch": null,
-          "revision": "ea3723f3158c1ee329d43a1d7acb7d8e1fa785c7",
-          "version": "1.0.1"
+          "revision": "88d93fdbf4ab8c10fd84c6a423b54d5c518a716f",
+          "version": "2.0.0"
         }
       },
       {
@@ -26,15 +26,6 @@
           "branch": null,
           "revision": "8ab924bd8f4f2d272ef55895cd8d3fd074b90702",
           "version": "2.2.4"
-        }
-      },
-      {
-        "package": "RxSwift",
-        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
-        "state": {
-          "branch": null,
-          "revision": "7e01c05f25c025143073eaa3be3532f9375c614b",
-          "version": "6.1.0"
         }
       }
     ]

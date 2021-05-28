@@ -8,7 +8,7 @@
 
 import Alamofire
 import Foundation
-import HubkitDataModel
+import HubkitModel
 import Offenbach
 
 /// Responsible for requesting the HubKit API
@@ -28,7 +28,7 @@ final public class Hubkit: Client {
 //        #endif
     }
 
-    fileprivate(set) var project: HKProject? {
+    fileprivate(set) var project: Project? {
         didSet {
             guard let project = project else {
                 print("[HubKit] Got no project > ## KO ##")
@@ -39,14 +39,14 @@ final public class Hubkit: Client {
         }
     }
 
-    public var devices: [HKDevice] {
+    public var devices: [Device] {
         project?.devices ?? []
     }
 
     /// Define the authentication token use to sign the API call to HubKit
     @discardableResult
     public func set(project: String) -> Self {
-        get(action: "projects/\(project)") { [weak self] (result: Result<HKProject, AFError>) in
+        get(action: "projects/\(project)") { [weak self] (result: Result<Project, AFError>) in
             if case .success(let project) = result {
                 self?.project = project
             }
